@@ -3,7 +3,7 @@
 	function getSQLValue($value,$type){
 		switch ($type) {
 			case "string":
-				$value=($value!="")?filter_var($value,FILTER_SANITIZE_MAGIC_QUOTES):"";
+				$value=($value!="")?filter_var($value,FILTER_SANITIZE_ADD_SLASHES):"";
 				break;
 			case "int":
 				$value=($value!="")?filter_var($value,FILTER_SANITIZE_NUMBER_INT):"";
@@ -55,9 +55,10 @@
 				$stmt->execute();
 				$stmt->close();
 				$db_link->close();
-				header("Location:register.php?loginStatus=1");
+				
 				//echo "<script> alert('註冊成功');location.href='register.php';</script>";
 			 }
+			 header("Location:register.php?loginStatus=1");
 		}
 	
 ?>

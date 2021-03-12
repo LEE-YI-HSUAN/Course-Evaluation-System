@@ -7,6 +7,11 @@
   //將資料一筆一筆讀取
   $all_result = $db_link -> query($sql_query);
   $db_link->close();
+
+  if(isset($_SESSION['admin'])){
+    if($_SESSION['admin'] == 1)
+        header("Location:adm_index.php");
+  }
 ?>
 
 <!DOCTYPE html>
@@ -64,18 +69,21 @@
         
         <div class="row">
       <div class="col-sm text-right" style="padding: 12px 10px">
+      
           <? if(!isset($_SESSION["loginMember"])||($_SESSION["loginMember"]=="")){?>
-
+                <!-- 未登入 -->
                 <a class="btn btn-outline-info" href="register.php" role="button">註冊</a>
                 <a class="btn btn-outline-danger" href="login.php" role="button">登入</a>
           <? } else{ ?>
+                <!-- 已登入 -->
                 <a class="btn btn-outline-danger" href="signOut.php" role="button">登出</a>
           <? } ?>
       </div>
     </div>
       
        <div class="bg_black">
-          <? while($row_result = $all_result->fetch_assoc()){ 
+          <?  
+          while($row_result = $all_result->fetch_assoc()){ 
              echo "<a  class='btn border text-left' href='message.php?class={$row_result['subject']}'>".$row_result['subject']."</a>";
            } ?>
            <!--  <a  class="btn border text-left" href="message.php?變形學">變形學</a>

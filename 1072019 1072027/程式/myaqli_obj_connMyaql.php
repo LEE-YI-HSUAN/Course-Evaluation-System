@@ -4,10 +4,10 @@
 	// header("Context-Type: text/html; charset = utf-8");
 
 	$db_host = "localhost";
-	$db_username = "finaltopic";
-	$db_password = "1234";
+	$db_username = "Course-Evaluation-System";
+	$db_password = "doyoulikeme";
 	//資料表名稱
-	$db_name = "finaltopic";
+	$db_name = "Course-Evaluation-System";
 
 	$db_link = @new mysqli($db_host,$db_username,$db_password,$db_name);
 

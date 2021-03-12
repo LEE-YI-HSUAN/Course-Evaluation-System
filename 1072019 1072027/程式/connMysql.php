@@ -1,9 +1,9 @@
 <? 
 	// header("Conten-Type: text/html; charset=utf-8");
-
+	//用mysqli方式連接資料庫
 	$db_host="localhost";
-	$db_ID="finaltopic";
-	$db_PW="1234";
+	$db_ID="Course-Evaluation-System";
+	$db_PW="doyoulikeme";
 	$db_link=@mysqli_connect($db_host,$db_ID,$db_PW,$db_ID);//@可以把錯誤訊息擋住
 	if($db_link ->connect_error!=""){//if(!dblink)//用這個方法的話上面少最後項
 		echo "failed(1)";

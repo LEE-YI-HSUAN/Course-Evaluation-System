@@ -42,7 +42,6 @@
 		}
 		else if(!(isset($_POST['HWpressure'])) || $_POST['HWpressure']=='')
 		{
-			
 			$err = 3;
 		}
 		else if(!($_POST['recommend']<= 5 && $_POST['recommend'] >= 1)){

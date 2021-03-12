@@ -1,4 +1,4 @@
-<?
+﻿<?
 	//管理員看到的
 	session_start();
 
@@ -115,6 +115,7 @@
 		<? } else{ ?>
 			<a class="btn btn-outline-danger" href="signOut.php" role="button">登出</a>
 		<? } ?>
+		<a class="btn btn-outline-info" href="index1.php">回首頁</a>
 		</form>
 	</div>
 	<!-- 課程評價 -->

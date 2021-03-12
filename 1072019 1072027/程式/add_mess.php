@@ -93,7 +93,6 @@
 			 	<div>
 			 		<span id="input">輸入留言</span>
 			 		
-			 		
 			 	</div>
 			 	<TextArea class="TextArea" Cols="150" Rows="25" name="Mess"></TextArea>
 			</div>

@@ -9,6 +9,10 @@
 	if(isset($_GET['class'])){
 		$Subject = $_GET['class'];
 	}
+	if(isset($_SESSION['admin'])){
+		if($_SESSION['admin'] == 1)
+		header("Location:adm_mess.php?class=".$_GET['class']);
+	}
 
 	//一頁十筆資料
 	$pageRow_records = 10;
@@ -112,6 +116,7 @@
 		<? } else{ ?>
 			<a class="btn btn-outline-danger" href="signOut.php" role="button">登出</a>
 		<? } ?>
+		<a class="btn btn-outline-info" href="index1.php">回首頁</a>
 	</div>
 	<!-- 課程評價 -->
 	<div class="container border border-secondary rounded top">
